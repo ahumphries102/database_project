@@ -1,0 +1,29 @@
+{
+  "name": "database_project",
+  "version": "1.0.0",
+  "description": "It'll be populated with one set. Players will be able to view all the cards and filter them by any of their values or combination of (color, cost, artist, etc...). Players will be able to save cards they like into a collection to create a deck.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node Server/axiosServer.js",
+    "start": "npm nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahumphries102/database_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahumphries102/database_project/issues"
+  },
+  "homepage": "https://github.com/ahumphries102/database_project#readme"
+}

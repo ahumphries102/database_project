@@ -1,0 +1,8 @@
+When not logged into PSQL use these commands
+
+createdb *NAME OF DB*
+dropdb *NAME OF DB*
+
+
+When logged in your DB
+To view table: \d+ 
