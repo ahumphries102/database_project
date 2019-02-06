@@ -7,6 +7,7 @@ const client = new Client({
 	port: 5432,
 	database:'MagicCards'
 })
+
 client.connect()
 .then(console.log('You are connected to users db'))
 .catch(error=>(console.log(error)))
@@ -20,13 +21,11 @@ userRouter.get('/users', (request, response)=>{
 })
 
 userRouter.post('/users', (request, response)=>{
-	let cardSearch = 'SELECT id FROM card_table'
-	let card = null
-	let toDb = 'INSERT INTO user_table VALUES ($1) FROM card_table'
-	let values = [card_table.id request.body]
-	client.query(cardSearch)
-	.then((cardSearch)=>card = cardSearch)
-	.then(results=> response.send(results.rows))
+	let toDb = 'INSERT INTO user_table (ID) VALUES ($1)'
+	let name = [1]
+	
+	client.query(toDb, name)
+	.then((results)=>response.send(results.rows))
 	.catch(error=>console.log(error))
 })
 
