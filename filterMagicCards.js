@@ -1,8 +1,4 @@
 let cards = {
-   "object": "list",
-   "total_cards": 273,
-   "has_more": true,
-   "next_page": "https://api.scryfall.com/cards/search?format=json&include_extras=false&include_multilingual=false&order=set&page=2&q=e%3Arna&unique=prints",
    "data": [
       {
          "object": "card",
@@ -17618,6 +17614,9 @@ for (let card in cards.data) {
    newCards.color_identity = cards.data[card].color_identity
    newCards.set = cards.data[card].set
    newCards.rarity = cards.data[card].rarity
-   if(newCards)
-   console.log(newCards)
+   if(newCards.oracle_text.includes("\n"))
+   {
+      newCards.oracle_text.replace(/[^a-zA-Z0-9]/g,'_')
+   }
+   console.log(Object.values(newCards))
 }

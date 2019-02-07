@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "node Server/axiosServer.js",
-    "start": "npm nodemon"
+    "start": "nodemon Server/server.js"
   },
   "repository": {
     "type": "git",
